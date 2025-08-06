@@ -4,6 +4,9 @@
  */
 package belajar_java_pamujib_p1;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -11,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author LENOVO
  */
-public class BELAJAR_JAVA_PAMUJIB_P1 {
+public class Bab3 {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 //        print helo dunia basic
 //        System.out.println("Halo, dunia!");
@@ -26,8 +29,9 @@ public class BELAJAR_JAVA_PAMUJIB_P1 {
 //        System.out.println("Angka "+" "+5);
 //        System.out.println("2 + 5"+" = "+2+5);
 //        System.out.println("2 + 5"+" = "+(2+5));
-        kalkulator();
+//        kalkulator();
 //        inputUser();
+        inputUser2();
 //          JoptionPane();
 
     }
@@ -91,6 +95,27 @@ public class BELAJAR_JAVA_PAMUJIB_P1 {
         umur = input.nextInt();
 
         System.out.println("Halo, " + nama + " kamu berumur " + umur + "tahun ya.");
+    }
+    
+    public static void inputUser2() throws IOException {
+        String namaDepan = "";
+        String namaBelakang = "";
+        //buat objek dari inputStream
+        InputStreamReader ireader = new InputStreamReader(System.in);
+        //buat objek bufferreader
+        BufferedReader breader = new BufferedReader(ireader);
+        System.out.println("Nama Depan : ");
+        //membaca inputan user
+        namaDepan =
+        breader.readLine();
+        System.out.println("Nama Belakang : ");
+        //membaca inputan user
+        namaBelakang =
+        breader.readLine();
+        System.out.println("Nama Saya adalah :");
+        System.out.println(namaDepan + " " +
+        namaBelakang);
+
     }
     
     public static void JoptionPane() {
